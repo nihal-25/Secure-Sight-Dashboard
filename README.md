@@ -88,5 +88,4 @@ Improve timeline animation and drag performance.
 
 Add admin panel to manage incidents dynamically.
 
-Add audio waveform for threat detection clues.
 
