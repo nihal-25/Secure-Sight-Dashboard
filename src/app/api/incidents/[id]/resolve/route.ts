@@ -1,11 +1,16 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma'; // Assuming your prisma instance is here
+// src/app/api/incidents/[id]/resolve/route.ts
 
-export async function PATCH(
-  req: NextRequest,
-  { params }: { params: { id: string } }
-) {
-  const { id } = params;
+import { PrismaClient } from '@prisma/client';
+import { NextRequest, NextResponse } from 'next/server';
+
+const prisma = new PrismaClient();
+
+export async function PATCH(req: NextRequest) {
+  const id = req.nextUrl.pathname.split('/').at(-2); // Get `[id]` from the URL path
+
+  if (!id) {
+    return NextResponse.json({ error: 'Missing ID' }, { status: 400 });
+  }
 
   try {
     const updated = await prisma.incident.update({
