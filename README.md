@@ -42,28 +42,6 @@ A modern incident review dashboard with interactive video timeline, camera insig
 
 > App should be running at `http://localhost:3000`.
 
----
-
-### Deploying to Vercel
-
-1. **Push your code to GitHub.**
-2. **Import your project on [vercel.com](https://vercel.com).**
-3. When prompted for the root directory, choose:
-   ```
-   /
-   ```
-4. Add your environment variables under **Project Settings → Environment Variables**:
-   ```env
-   DATABASE_URL=your_postgresql_database_url
-   ```
-5. Update your `package.json` to ensure Prisma generates before build:
-   ```json
-   "scripts": {
-     "postinstall": "prisma generate",
-     "build": "prisma generate && next build"
-   }
-   ```
-6. **Deploy!**
 
 ---
 
@@ -78,19 +56,7 @@ A modern incident review dashboard with interactive video timeline, camera insig
 - **API Design:** RESTful endpoints (e.g. `PATCH /api/incidents/:id/resolve`).
 
 ---
+## 📸 Screenshots  
 
-## 🧠 If I Had More Time...
-
-Learn how to implement 3D website in React Three Fibre.
-
-Add authentication for user login/logout.
-
-Add search/filter for incidents.
-
-Sync video thumbnails more precisely on seek.
-
-Improve timeline animation and drag performance.
-
-Add admin panel to manage incidents dynamically.
-
-
+### Dashboard View  
+![Dashboard Screenshot](./screenshots/dashboard.png)  
