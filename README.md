@@ -4,6 +4,11 @@ A modern incident review dashboard with interactive video timeline, camera insig
 
 ---
 
+## 🔗 Live Demo  
+[https://secure-sight-dashboard-j8jp.vercel.app/](https://secure-sight-dashboard-j8jp.vercel.app/)
+
+---
+
 ## 🛠️ Deployment Instructions
 
 ### Local Development
