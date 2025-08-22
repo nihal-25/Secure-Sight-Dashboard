@@ -55,7 +55,7 @@ export default function IncidentList({ onIncidentClick }: Props) {
 
   const handleResolve = async (id: string) => {
   setIncidents((prev) => prev.filter((inc) => inc.id !== id));
-  setResolvedCount((prev) => prev + 1); // <--- increment locally
+  setResolvedCount((prev) => prev + 1); 
   await fetch(`/api/incidents/${id}/resolve`, {
     method: "PATCH",
   });
@@ -112,7 +112,7 @@ export default function IncidentList({ onIncidentClick }: Props) {
   onClick={() => {
     const secondsFromStart = (new Date(incident.tsStart).getTime() - baseTime.getTime()) / 1000;
     onIncidentClick(secondsFromStart);
-    setSelectedIncidentId(incident.id); // set the selected card
+    setSelectedIncidentId(incident.id); 
   }}
 >
 

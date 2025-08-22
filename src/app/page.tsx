@@ -105,8 +105,8 @@ export default function Home() {
         </div>
        <div className="navbar-right">
        <div className="user-info">
-       <span className="username">Mohammed Ajhas</span>
-       <span className="email">ajhas@mandlacx.com</span>
+       <span className="username">Nihal Manjunath</span>
+       <span className="email">nihal6mn@gmail.com</span>
       </div>
       <span className="dropdown-arrow">▼</span>
       </div>

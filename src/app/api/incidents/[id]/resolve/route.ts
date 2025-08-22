@@ -6,7 +6,7 @@ import { NextRequest, NextResponse } from 'next/server';
 const prisma = new PrismaClient();
 
 export async function PATCH(req: NextRequest) {
-  const id = req.nextUrl.pathname.split('/').at(-2); // Get `[id]` from the URL path
+  const id = req.nextUrl.pathname.split('/').at(-2); 
 
   if (!id) {
     return NextResponse.json({ error: 'Missing ID' }, { status: 400 });

@@ -19,7 +19,7 @@ async function main() {
 
   const baseTime = new Date('2025-07-21T00:00:00Z');
 
-  // Create only 10 incidents (20 minutes total)
+  
   const incidents = Array.from({ length: 10 }, (_, i) => {
     const camera = [cam1, cam2, cam3][i % 3];
     const type = types[i % 3];
@@ -36,7 +36,7 @@ async function main() {
     case "Face Recognised":
       return "/thumbnails/thumb3.jpg";
     default:
-      return "/thumbnails/thumb1.jpg"; // fallback
+      return "/thumbnails/thumb1.jpg"; 
   }
 };
 
@@ -52,7 +52,7 @@ async function main() {
 
   await prisma.incident.createMany({ data: incidents });
 
-  console.log('✅ Seeded 3 cameras and 10 incidents!');
+  console.log(' Seeded 3 cameras and 10 incidents!');
 }
 
 main().finally(() => prisma.$disconnect());

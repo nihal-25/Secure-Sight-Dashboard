@@ -9,7 +9,7 @@ export async function GET(req: Request) {
 
   const whereClause = resolved === 'false'
     ? { resolved: false }
-    : {}; // fallback to return all if no filter
+    : {}; 
 
   const incidents = await prisma.incident.findMany({
     where: whereClause,
